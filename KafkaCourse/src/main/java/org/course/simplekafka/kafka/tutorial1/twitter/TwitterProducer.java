@@ -1,4 +1,4 @@
-package org.course.simplekafka.kafka.twitter;
+package org.course.simplekafka.kafka.tutorial1.twitter;
 
 import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
@@ -20,9 +20,9 @@ import java.util.concurrent.TimeUnit;
 
 public class TwitterProducer {
     Logger logger = LoggerFactory.getLogger(TwitterProducer.class.getName());
-    String consumerkey = "";
-    String consumersecret = "";
-    String token = "";
+    String consumerKey = "";
+    String consumerSecret = "";
+    String token= "";
     String tokenSecret = "";
 
     public static void main(String[] args) {
@@ -64,7 +64,7 @@ public class TwitterProducer {
 
         // These secrets should be read from a config file
 
-        Authentication hosebirdAuth = new OAuth1(consumerkey, consumersecret, token, tokenSecret);
+        Authentication hosebirdAuth = new OAuth1(consumerKey, consumerSecret, token, tokenSecret);
 
         ClientBuilder builder = new ClientBuilder()
                 .name("Hosebird-Client-01")
