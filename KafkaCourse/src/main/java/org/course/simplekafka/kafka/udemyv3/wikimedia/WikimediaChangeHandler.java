@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 
 public class WikimediaChangeHandler implements EventHandler {
     private final Logger log = LoggerFactory.getLogger(WikimediaChangeHandler.class.getSimpleName());
-    private KafkaProducer<String, String> producer;
-    private String topic;
+    private final KafkaProducer<String, String> producer;
+    private final String topic;
 
 
     public WikimediaChangeHandler(KafkaProducer<String, String> producer, String topic) {
